@@ -99,3 +99,8 @@ button {
   border: 1px solid #ccc;
   padding: 10px;
 }
+.authentication-container{
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 100px;
+}

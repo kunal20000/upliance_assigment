@@ -34,13 +34,10 @@ const UserDataForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const id = generateUserId();
-    setFormData({
-      id,
-      name: "",
-      address: "",
-      email: "",
-      phone: "",
-    });
+    setFormData((prevData) => ({
+      ...prevData,
+      id: id,
+    }));
     saveFormData();
     console.log("formsubmitted", formData);
   };
@@ -60,7 +57,7 @@ const UserDataForm = () => {
       });
     }
   }, []);
-  
+
   useEffect(() => {
     // Clear form data when component mounts
     setFormData({
